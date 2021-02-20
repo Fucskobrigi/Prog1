@@ -1,0 +1,15 @@
+def gcd(a,b):
+    if a > b:
+        temp=a   #vagy a,b=b,a
+        a=b
+        b=temp
+    divisor=1
+    for i in range(1,a+1):
+        if a % i == 0 and b % i == 0:
+            divisor=i
+    return divisor
+
+
+a=int(input("Adj meg egy számot: "))
+b=int(input("Adj meg egy másik számot: "))
+print("The greatest common divisor of {} and {} = {}".format(a,b,gcd(a,b)))
